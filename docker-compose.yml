@@ -1,0 +1,11 @@
+services:
+  python3:
+    restart: always
+    build: .
+    container_name: 'python3'
+    tty: true
+    stdin_open: true
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./code:/myapp/code
